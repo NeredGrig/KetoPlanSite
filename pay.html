@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Онлайн курс</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/pay.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no"><!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    
+       ym(80078182, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/67360039" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+  </head>
+  <body>
+      <body>
+        <div class="pay-page">
+          <h2 class="pay-page__title">Оформление заказа</h2><a class="pay-page__back-link" href="index.html">Вернуться на сайт</a>
+          <form class="form js-payform" action="/order" method="post">
+            <div class="form__mail">
+              <div class="form__title">Адрес электронной почты</div>
+              <div class="form__input-container">
+                <input class="name" id="name" type="hidden" name="order[name]">
+                <input class="email form__input" type="hidden" placeholder="Введите email на который отправить доступ в личный кабинет" name="order[email]" id="email">
+                <input type="hidden" id="js-product-id" name="order[products][]" value="">
+              </div>
+            </div>
+            <div class="basket">
+              <div class="basket__picture"><img src="img/product.png" alt="product"></div>
+              <div class="basket__info">
+                <div class="basket__title js-product-name"></div>
+                <div class="basket__text js-pay-description"></div>
+              </div>
+              <div class="basket__content">
+                <div class="basket__data">
+                  <div class="basket__timer" id="timer">
+                    <h3 class="basket__timer-title">До завершения акции осталось:</h3>
+                    <div class="basket__timer-inner">
+                      <div class="basket__timer-item"><span class="basket__timer-num minutes">15</span>
+                        <div class="basket__timer-name">минут</div>
+                      </div><span class="basket__dots">:</span>
+                      <div class="basket__timer-item"><span class="basket__timer-num seconds">00</span>
+                        <div class="basket__timer-name">секунд</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="basket__price">
+                    <div class="basket__price-inner"><span class="old-price"><span class="js-old-price">890</span>₽</span>
+                      <div class="new-price"><span class="js-new-price">29</span>₽</div>
+                    </div>
+                    <div class="basket__price-text">с учетом скидки</div>
+                  </div>
+                </div>
+                <div class="basket__check">
+                  <input class="basket__check-input" type="checkbox" id="checkbox">
+                  <label class="basket__check-box" for="checkbox"></label><span class="basket__check-text basket__check-text--top">Нажимая кнопку "Оплатить" Вы даете согласие на&ensp;<a class="basket__check-text basket__check-text--data-top" href="/permission.pdf" target="_blank">обработку персональных данных</a>, а также подтверждаете ознакомление с&ensp;<a class="basket__check-text basket__check-text--data-top" href="/offer.pdf" target="_blank">публичной офертой</a> и автоматическими списаниями. Первое списание в размере <span class="js-tariff1">890</span> рублей через <span class="js-initialInterval">72</span> часа после подписки и далее, согласно <a class="basket__check-text basket__check-text--data-top" href="/tariff.pdf" target="_blank">тарифу</a> раз в <span class="js-followingIntervalDay">7 дней</span> <span class="js-tariff1">890</span> рублей (возможны частичные списания по <span class="js-part-price">127</span> рублей)</span>
+                </div><span class="error-alert highlighted"></span>
+                <button onclick="document.location='http://clickfrm.com/CcxV'" class="basket__button" type="submit">Оплатить</button>
+                <div class="basket__check2">
+                  <input class="basket__check-input" type="checkbox" id="checkbox2">
+                  <label class="basket__check-box" for="checkbox2"></label><span class="basket__check-text">Нажимая кнопку "Оплатить" Вы даете согласие на&ensp;<a class="basket__check-text basket__check-text--data" href="/permission.pdf" target="_blank">обработку персональных данных</a>, а также подтверждаете ознакомление с&ensp;<a class="basket__check-text basket__check-text--data" href="/offer.pdf" target="_blank">публичной офертой</a>, автоматическими списаниями и&ensp;<a class="basket__check-text basket__check-text--data" href="/tariff.pdf" target="_blank">тарифами</a></span>
+                </div>
+              </div>
+            </div>
+          </form>
+            <div class="footer">
+              <div class="container">
+                <div class="footer__inner">
+                  <div class="footer__item footer__item--start">
+                    <div class="footer__info footer__info--legal js-legal"></div>
+                  </div>
+                  <div class="footer__item footer__item--middle">
+                    <div class="footer__info footer__info--grey">Принимаем к оплате:</div>
+                    <div class="footer__pay"><img class="footer__img" src="img/fvisa.png"><img class="footer__img" src="img/fmc.png"><img class="footer__img" src="img/fmir.png"></div>
+                    <div class="footer__info footer__info--grey">Платеж защищен</div>
+                    <div class="footer__pay"><img class="footer__img" src="img/flock.png"><img class="footer__img" src="img/flock2.png"><img class="footer__img" src="img/fsecure.png"><img class="footer__img" src="img/fpci.png"></div>
+                  </div>
+                  <div class="footer__item"><a class="footer__info footer__info--link footer__info--mb" href="/policy.pdf" target="_blank">Политика конфиденциальности</a><a class="footer__info footer__info--link footer__info--mb" href="/offer.pdf" target="_blank">Оферта</a><a class="footer__info footer__info--link footer__info--mb js-unsubscribe" href="https://client.skill-pad.com/unsubscribe" target="_blank">Отменить подписку</a><a class="footer__info footer__info--link footer__info--mb" href="/permission.pdf" target="_blank">Политика обработки данных</a><a class="footer__info footer__info--link footer__info--mb" href="/about.html" target="_blank">О продукте</a><a class="footer__info footer__info--link footer__info--mb js-tariff-link" href="/tariff.pdf" target="_blank">Тарифы</a></div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/formValidation.js"></script>
+    <script src="js/landSettings.js"></script>
+    <script src="js/docs.js"></script>
+    <script src="js/pay.js"></script>
+  </body>
+</html>
